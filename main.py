@@ -1,6 +1,6 @@
 import tkinter as tk
 from components.selector import Selector
-from spatialFilters import digitalNegative, base
+from spatialFilters import digitalNegative, averaging, base, laplacianFilter, prewittFilter, sobelFilter
 
 class App(tk.Frame):
     def __init__(self, master):
@@ -9,17 +9,25 @@ class App(tk.Frame):
 
         Selector(self, title="Image Enhancement and Filter in Spatial Domain", options=[
             {
-                "title": "Point Operations",
-                "component": base.BaseFilterLayout
-            },
-            {
-                "title": "Contrast Stretching",
-                "component": base.BaseFilterLayout
-            },
-            {
                 "title": "Digital Negative",
                 "component": digitalNegative.DigitalNegative
-            }
+            },
+            {
+                "title": "Averaging Filter",
+                "component": averaging.Averaging
+            },
+            {
+                "title": "Laplacian Filter",
+                "component": laplacianFilter.LaplacianFilter
+            },
+            {
+                "title": "Prewitt Filter",
+                "component": prewittFilter.PrewittFilter
+            },
+            {
+                "title": "Sobel Filter",
+                "component": sobelFilter.SobelFilter
+            },
         ])
 
         Selector(self, title="Image Enhancement and Filter in Frequency Domain", options=[

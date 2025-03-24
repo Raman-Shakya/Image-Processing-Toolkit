@@ -14,9 +14,12 @@ class BaseFilterLayout(tk.Tk):
         self.imageContainer = ImageLists(self, "./temp_input/input-")
         self.outputContainer = ImageLists(self, "./temp_output/output-")
 
-    def readImage(self):
+    def readImage(self, grayScale=False):
         filePath = askopenfilename()
         image = cv2.imread(filePath)
+        if grayScale:
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
         aspect = len(image) / len(image[0])
         height = 300
         image = cv2.resize(image, (int(height/aspect), height), interpolation=cv2.INTER_LINEAR)

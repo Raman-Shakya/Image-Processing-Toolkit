@@ -14,3 +14,7 @@
 ## Operations Available
 ### Image Enhancement and Filter in Spatial Domain
 1. Digital Negative
+2. Averaging Filter
+3. Laplacian Filter
+4. Prewitt Filter
+5. Sobel Filter
