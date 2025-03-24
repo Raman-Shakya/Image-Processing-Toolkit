@@ -18,3 +18,5 @@
 3. Laplacian Filter
 4. Prewitt Filter
 5. Sobel Filter
+6. Histogram Equalization
+7. Gaussian Blur

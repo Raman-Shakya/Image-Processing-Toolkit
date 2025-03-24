@@ -1,6 +1,6 @@
 import tkinter as tk
 from components.selector import Selector
-from spatialFilters import digitalNegative, averaging, base, laplacianFilter, prewittFilter, sobelFilter
+from spatialFilters import digitalNegative, averaging, base, laplacianFilter, prewittFilter, sobelFilter, histogramEqualization, gaussianBlur
 
 class App(tk.Frame):
     def __init__(self, master):
@@ -27,6 +27,14 @@ class App(tk.Frame):
             {
                 "title": "Sobel Filter",
                 "component": sobelFilter.SobelFilter
+            },
+            {
+                "title": "Histogram Equalization",
+                "component": histogramEqualization.HistogramEqualization
+            },
+            {
+                "title": "Gaussian Blur",
+                "component": gaussianBlur.GaussianBlur
             },
         ])
 

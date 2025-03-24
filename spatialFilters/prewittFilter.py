@@ -32,7 +32,6 @@ class PrewittFilter(baseKernel.BaseKernelFilter):
             magnitude.append(temp)
 
         threshold = total / (len(magnitude) * len(magnitude[0]))
-        print(threshold)
 
         for i in range(len(magnitude)):
             for j in range(len(magnitude[0])):

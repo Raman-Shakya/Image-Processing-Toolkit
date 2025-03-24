@@ -32,6 +32,7 @@ class BaseFilterLayout(tk.Tk):
     def addOutput(self, output):
         cv2.imwrite(f"temp_output/output-{len(self.output_image)}.png", output)
         self.outputContainer.addImage(0)
+        self.geometry("400x600")
 
 
 class ImageLists(tk.Frame):
