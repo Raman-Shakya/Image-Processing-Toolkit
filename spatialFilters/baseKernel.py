@@ -27,6 +27,6 @@ class BaseKernelFilter(base.BaseFilterLayout):
         for i in range(1, len(self.input_image[0])-2):
             temp = []
             for j in range(1, len(self.input_image[0][0])-2):
-                temp.append(sum(self.kernel * self.input_image[0][i-1:i+2, j-1:j+2]))
+                temp.append(sum(sum(self.kernel * self.input_image[0][i-1:i+2, j-1:j+2])))
             output.append(temp)
         return np.array(output)
