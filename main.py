@@ -1,6 +1,9 @@
 import tkinter as tk
 from components.selector import Selector
-from spatialFilters import digitalNegative, averaging, base, laplacianFilter, prewittFilter, sobelFilter, histogramEqualization, gaussianBlur
+
+from spatialFilters import digitalNegative, averaging, laplacianFilter, prewittFilter, sobelFilter, histogramEqualization, gaussianBlur
+from frequencyFilters import base, fft
+
 
 class App(tk.Frame):
     def __init__(self, master):
@@ -40,8 +43,8 @@ class App(tk.Frame):
 
         Selector(self, title="Image Enhancement and Filter in Frequency Domain", options=[
             {
-                "title": "hello",
-                "component": base.BaseFilterLayout
+                "title": "Fast Fourier Transform",
+                "component": fft.FFT
             },
             {
                 "title": "hello",
